@@ -1,0 +1,26 @@
+plugins {
+    id 'java-library'
+    id 'kotlin'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+    implementation androidLibs.kotlin_stdlib
+
+    // A library for composing asynchronous and event-based programs by using observable sequences
+    implementation libs.rxjava
+    implementation libs.rxkotlin
+
+    // Test frameworks
+    testImplementation testLibs.junit
+    testImplementation testLibs.mockito
+    testImplementation testLibs.mockito_inline
+    testImplementation testLibs.mockito_kotlin
+    testImplementation testLibs.powermock
+    testImplementation testLibs.powermock_junit
+    testImplementation testLibs.powermock_mockito
+}
